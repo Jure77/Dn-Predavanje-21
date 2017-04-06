@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Filton|GuestBook {% endblock %}
+
+{% block naslov %} Dobrodošli v GuestBook :) {% endblock %}
+
+
+{% block vsebina %}
+
+<link rel="stylesheet" href="/assets/css/guest.css">
+
+<div id="register">
+    <form method="post" action="/save">
+        <p>Ime: <input name="ime"></p>
+        <p>Priimek: <input name="priimek"></p>
+        <p>Email: <input name="email"></p>
+        <p>Sporočilo: <input name="sporocilo"></p>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+{% endblock %}

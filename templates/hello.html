@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+{% if sign_in %}
+<h1>Dobrodošli na spletni strani hotel Filton </h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/guestbook">GuestBook</a></li>
+        <li><a href="/vsa-sporocila">Sporočila</a></li>
+        <li><a id="logout" href="{{ logout_url }}">Logout</a></li>
+    </ul>
+    <h2>Hello {{ user.nickname() }}</h2>
+
+
+{% else %}
+    <h1>Dobrodošli na spletni strani hotel Filton </h1>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/vsa-sporocila">Sporočila</a></li>
+        <li> <a href="{{ login_url }}">Log in</a></li>
+    </ul>
+ {% endif %}
+</body>
+</html>
+
+
+
+
+
+

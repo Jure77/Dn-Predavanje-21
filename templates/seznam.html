@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vsa sporočila</title>
+</head>
+<body>
+    {% for sp in sporocila %}
+
+    <p>
+        <a href="/posamezno-sporocilo/{{ sp.key.id() }}">#</a>
+
+        {{ sp.nastanek.strftime("%d.%m.%Y %H:%M") }} {{ sp.ime }} {{ sp.priimek }} {{ sp.sporocilo }}
+    </p>
+
+    {% else %}
+        <p>Ni sporočil</p>
+    {% endfor %}
+</body>
+</html>
